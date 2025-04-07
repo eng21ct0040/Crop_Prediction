@@ -21,29 +21,15 @@ app.config['CORS_HEADERS'] = 'Content-Type'
 cors = CORS(app, resources={r"/ticker": {"origins": "http://localhost:port"}})
 
 commodity_dict = {
-    "arhar": "static/Arhar.csv",
-    "bajra": "static/Bajra.csv",
-    "barley": "static/Barley.csv",
-    "copra": "static/Copra.csv",
-    "cotton": "static/Cotton.csv",
-    "sesamum": "static/Sesamum.csv",
-    "gram": "static/Gram.csv",
+    
     "groundnut": "static/Groundnut.csv",
-    "jowar": "static/Jowar.csv",
-    "maize": "static/Maize.csv",
-    "masoor": "static/Masoor.csv",
     "moong": "static/Moong.csv",
-    "niger": "static/Niger.csv",
-    "paddy": "static/Paddy.csv",
-    "ragi": "static/Ragi.csv",
-    "rape": "static/Rape.csv",
     "jute": "static/Jute.csv",
     "safflower": "static/Safflower.csv",
     "soyabean": "static/Soyabean.csv",
     "sugarcane": "static/Sugarcane.csv",
     "sunflower": "static/Sunflower.csv",
-    "urad": "static/Urad.csv",
-    "wheat": "static/Wheat.csv"
+   
 }
 
 annual_rainfall = [29, 21, 37.5, 30.7, 52.6, 150, 299, 251.7, 179.2, 70.5, 39.8, 10.9]
@@ -425,38 +411,10 @@ def TwelveMonthPrevious(name):
 
 
 if __name__ == "__main__":
-    arhar = Commodity(commodity_dict["arhar"])
-    commodity_list.append(arhar)
-    bajra = Commodity(commodity_dict["bajra"])
-    commodity_list.append(bajra)
-    barley = Commodity(commodity_dict["barley"])
-    commodity_list.append(barley)
-    copra = Commodity(commodity_dict["copra"])
-    commodity_list.append(copra)
-    cotton = Commodity(commodity_dict["cotton"])
-    commodity_list.append(cotton)
-    sesamum = Commodity(commodity_dict["sesamum"])
-    commodity_list.append(sesamum)
-    gram = Commodity(commodity_dict["gram"])
-    commodity_list.append(gram)
     groundnut = Commodity(commodity_dict["groundnut"])
     commodity_list.append(groundnut)
-    jowar = Commodity(commodity_dict["jowar"])
-    commodity_list.append(jowar)
-    maize = Commodity(commodity_dict["maize"])
-    commodity_list.append(maize)
-    masoor = Commodity(commodity_dict["masoor"])
-    commodity_list.append(masoor)
     moong = Commodity(commodity_dict["moong"])
     commodity_list.append(moong)
-    niger = Commodity(commodity_dict["niger"])
-    commodity_list.append(niger)
-    paddy = Commodity(commodity_dict["paddy"])
-    commodity_list.append(paddy)
-    ragi = Commodity(commodity_dict["ragi"])
-    commodity_list.append(ragi)
-    rape = Commodity(commodity_dict["rape"])
-    commodity_list.append(rape)
     jute = Commodity(commodity_dict["jute"])
     commodity_list.append(jute)
     safflower = Commodity(commodity_dict["safflower"])
@@ -467,10 +425,7 @@ if __name__ == "__main__":
     commodity_list.append(sugarcane)
     sunflower = Commodity(commodity_dict["sunflower"])
     commodity_list.append(sunflower)
-    urad = Commodity(commodity_dict["urad"])
-    commodity_list.append(urad)
-    wheat = Commodity(commodity_dict["wheat"])
-    commodity_list.append(wheat)
+    
 
     app.run()
 
